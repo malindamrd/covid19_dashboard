@@ -21,7 +21,28 @@ function connectDB(){
     return $conn;
 }
 
+function ipUpdate($ipAddr){
+    $conn = connectDB();
 
+    $ip = $_SERVER['REMOTE_ADDR'];
+    $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+    $city = $details->city; // -> "Mountain View"
+    $region = $details->region;
+    $country = $details->country;
+
+    $location = $city." ".$region." ".$country;
+
+
+    try{
+        $sql = "INSERT INTO ip_info (ip_address, ip_location) VALUES ('".$ipAddr."' , '".$location."')";
+        $conn->query($sql);
+        return $sql;
+    }catch (Exception $e){
+        return $e->getMessage();
+    }
+
+
+}
 
 
 function checkUpdate($update_time){

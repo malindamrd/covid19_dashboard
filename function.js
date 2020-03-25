@@ -105,7 +105,9 @@ request.onload = function() {
       });
       chart.render();
 
-
+      $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+        console.log(data)
+      })
 
 
     }
