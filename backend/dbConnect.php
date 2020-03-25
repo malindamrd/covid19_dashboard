@@ -1,5 +1,5 @@
 <?php
-
+#author Malinda Deshapriya
 function connectDB(){
     $servername = "localhost";
     $username = "id13016492_previous_data";
