@@ -36,7 +36,7 @@
         <div class="col-lg">
             <div class="card bg-primary" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="local_new" class="card-title">500</h5>
+                    <h5 id="local_new" class="card-title"></h5>
                     <p class="card-text">Newly Reported Patients</p>
 
                 </div>
@@ -45,7 +45,7 @@
         <div class="col-lg">
             <div class="card bg-info" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="local_total_cases" class="card-title">500</h5>
+                    <h5 id="local_total_cases" class="card-title"></h5>
                     <p class="card-text">Total Reported Patients</p>
 
                 </div>
@@ -55,7 +55,7 @@
 
             <div class="card bg-success" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="local_recovered" class="card-title">2</h5>
+                    <h5 id="local_recovered" class="card-title"></h5>
                     <p class="card-text">Total Recovered Patients</p>
 
                 </div>
@@ -69,7 +69,7 @@
         <div hidden class="col col-lg-4">
             <div class="card" style="width: 18rem">
                 <div class="card-body">
-                    <h5 id="local_total_number_of_individuals_in_hospitals" class="card-title">2</h5>
+                    <h5 id="local_total_number_of_individuals_in_hospitals" class="card-title"></h5>
                     <p class="card-text">Hospitalized Pations</p>
                 </div>
 
@@ -78,7 +78,7 @@
         <div class="col col-lg-4">
             <div class="card bg-warning" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="local_new_deaths" class="card-title">2</h5>
+                    <h5 id="local_new_deaths" class="card-title"></h5>
                     <p class="card-text">Newly Reported Deaths</p>
 
                 </div>
@@ -88,7 +88,7 @@
         <div class="col col-lg-4">
             <div class="card bg-danger" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="local_deaths" class="card-title">2</h5>
+                    <h5 id="local_deaths" class="card-title"></h5>
                     <p class="card-text">Total Reported Deaths</p>
                 </div>
 
@@ -106,7 +106,7 @@
         <div class="col-lg">
             <div class="card bg-primary" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="global_new_cases" class="card-title">500</h5>
+                    <h5 id="global_new_cases" class="card-title"></h5>
                     <p class="card-text">Newly Reported Patients</p>
 
                 </div>
@@ -115,7 +115,7 @@
         <div class="col-lg">
             <div class="card bg-info" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="global_total_cases" class="card-title">500</h5>
+                    <h5 id="global_total_cases" class="card-title"></h5>
                     <p class="card-text">Total Reported Patients</p>
 
                 </div>
@@ -124,7 +124,7 @@
         <div class="col-lg">
             <div class="card bg-success" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="global_recovered" class="card-title">2</h5>
+                    <h5 id="global_recovered" class="card-title"></h5>
                     <p class="card-text">Total Recovered Patients</p>
 
                 </div>
@@ -136,7 +136,7 @@
         <div class="col col-lg-4">
             <div class="card bg-warning" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="global_new_deaths" class="card-title">2</h5>
+                    <h5 id="global_new_deaths" class="card-title"></h5>
                     <p class="card-text">Newly Reported Deaths</p>
 
                 </div>
@@ -145,7 +145,7 @@
         <div class="col col-lg-4">
             <div class="card bg-danger" style="width: 18rem;">
                 <div class="card-body">
-                    <h5 id="global_deaths" class="card-title">2</h5>
+                    <h5 id="global_deaths" class="card-title"></h5>
                     <p class="card-text">Total Reported Deaths</p>
 
                 </div>
