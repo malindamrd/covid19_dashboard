@@ -18,8 +18,6 @@ function connectDB(){
         return $conn;
     }
 
-
-
     return $conn;
 }
 
@@ -28,7 +26,6 @@ function connectDB(){
 
 function checkUpdate($update_time){
     $conn = connectDB();
-
 
     $sql = "SELECT * FROM previous_data WHERE update_time='".$update_time."'";
     $result = mysqli_query($conn, $sql);
