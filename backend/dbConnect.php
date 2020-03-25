@@ -1,17 +1,17 @@
 <?php
-#author Malinda Deshapriya
+#author Malinda Deshapriya 2020
 function connectDB(){
     $servername = "localhost";
     $username = "id13016492_previous_data";
     $password = "Malinda20408";
 
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
+//    $servername = "localhost";
+//    $username = "root";
+//    $password = "";
 
 // Create connection
-    //$conn = mysqli_connect($servername, $username, $password, "id13016492_previous_data");
-    $conn = mysqli_connect($servername, $username, $password, "previous_data");
+    $conn = mysqli_connect($servername, $username, $password, "id13016492_previous_data");
+    //$conn = mysqli_connect($servername, $username, $password, "previous_data");
 
 // Check connection
     if ($conn->connect_error) {
