@@ -52,8 +52,9 @@ request.onload = function() {
 
     var requestt = new XMLHttpRequest()
 
-    requestt.open('GET', 'https://coronadashboard.000webhostapp.com/new/backend/getPreviousData.php?last_update='+update_date_time+'&local_new='+local_new+'&local_total='+local_total_cases+'&local_recovered='+local_newlocal_recovered_cases+'&local_new_deaths='+local_new_deaths+'&local_deaths='+local_deaths+'', true)
-
+    //requestt.open('GET', 'https://coronadashboard.000webhostapp.com/new/backend/getPreviousData.php?last_update='+update_date_time+'&local_new='+local_new+'&local_total='+local_total_cases+'&local_recovered='+local_newlocal_recovered_cases+'&local_new_deaths='+local_new_deaths+'&local_deaths='+local_deaths+'&global_cases='+global_total_cases, true)
+    //requestt.open('GET', 'http://localhost/corona/backend/getPreviousData.php?last_update='+update_date_time+'&local_new='+local_new+'&local_total='+local_total_cases+'&local_recovered='+local_newlocal_recovered_cases+'&local_new_deaths='+local_new_deaths+'&local_deaths='+local_deaths+'&global_cases='+global_total_cases, true)
+    requestt.open('GET', 'https://coronadashboard.000webhostapp.com/backend/getPreviousData.php?last_update='+update_date_time+'&local_new='+local_new+'&local_total='+local_total_cases+'&local_recovered='+local_newlocal_recovered_cases+'&local_new_deaths='+local_new_deaths+'&local_deaths='+local_deaths+'&global_cases='+global_total_cases, true)
     requestt.onload = function() {
       var data = JSON.parse(this.response)
 
@@ -85,8 +86,28 @@ request.onload = function() {
       var dataPoints = [];
 
       $.each(data, function(key, value){
-        dataPoints.push({label: value['update_time'], y: parseInt(value['local_total_cases'])});
+        dataPoints.push({label: value['update_time'], y: parseInt(value['global_cases'])});
       });
+
+      var chart = new CanvasJS.Chart("chartContainer1", {
+        backgroundColor: "white",
+        title:{
+          text: "Global Cases",
+          fontColor: "black",
+        },
+        data: [
+          {
+            // Change type to "doughnut", "line", "splineArea", etc.
+            type: "line",
+            dataPoints: dataPoints
+          }
+        ]
+      });
+      chart.render();
+
+
+
+
     }
 
   } else {

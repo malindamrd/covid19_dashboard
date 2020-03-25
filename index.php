@@ -158,13 +158,13 @@
 <br/>
 
 <div class="row" style="margin-left: 10%; margin-right: 10%">
-    <div class="col-sm-12">
+    <div class="col-sm-6">
         <div id="chartContainer" style="height: 300px; width: 100%;"></div>
     </div>
 
-
-
-
+    <div class="col-sm-6">
+        <div id="chartContainer1" style="height: 300px; width: 100%;"></div>
+    </div>
 
 </div>
 

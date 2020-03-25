@@ -5,8 +5,13 @@ function connectDB(){
     $username = "id13016492_previous_data";
     $password = "Malinda20408";
 
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+
 // Create connection
-    $conn = mysqli_connect($servername, $username, $password, "id13016492_previous_data");
+    //$conn = mysqli_connect($servername, $username, $password, "id13016492_previous_data");
+    $conn = mysqli_connect($servername, $username, $password, "previous_data");
 
 // Check connection
     if ($conn->connect_error) {
@@ -48,10 +53,10 @@ function getdata(){
     }
 }
 
-function insertData($update_time, $local_new, $local_total, $local_recoverd, $local_deaths, $local_new_deaths){
+function insertData($update_time, $local_new, $local_total, $local_recoverd, $local_deaths, $local_new_deaths, $global_cases){
 
     $conn = connectDB();
-    $sql = "INSERT INTO previous_data VALUES ('".$update_time."','".$local_new."',  '".$local_total."', '".$local_recoverd."', '".$local_new_deaths."', '".$local_deaths."' )";
+    $sql = "INSERT INTO previous_data VALUES ('".$update_time."','".$local_new."',  '".$local_total."', '".$local_recoverd."', '".$local_new_deaths."', '".$local_deaths."' , '".$global_cases."' )";
 
     if ($conn->query($sql) === TRUE) {
         return true;
