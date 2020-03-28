@@ -39,14 +39,26 @@ request.onload = function() {
     document.getElementById("global_deaths").innerHTML = global_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     document.getElementById("global_new_deaths").innerHTML = global_new_deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     document.getElementById("global_recovered").innerHTML = global_recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-
-
-    var mal = global_total_cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    console.log(mal);
-
-
-
     document.getElementById("last_update").innerHTML = update_date_time;
+
+    var hospital_data_ = data['data']['hospital_data'];
+
+    var table = document.getElementById("hospitalData");
+
+
+    for(var i = 0; i < hospital_data_.length; i++) {
+      var hospital_name = hospital_data_[i]['hospital']['name'];
+      var sinhala_name = hospital_data_[i]['hospital']['name_si'];
+      var treatment_local = hospital_data_[i]['treatment_local'];
+      var treatment_foreign = hospital_data_[i]['treatment_foreign'];
+      var treatment_total = hospital_data_[i]['treatment_total'];
+
+      console.log(hospital_name)
+      $('#hospitalData tr:last').after('<tr><td>'+hospital_name+' - '+sinhala_name+'</td><td>'+treatment_local+'</td><td>'+treatment_foreign+'</td><td>'+treatment_total+'</td></tr>');
+
+
+    }
+
 
 
 
@@ -105,9 +117,7 @@ request.onload = function() {
       });
       chart.render();
 
-      $.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
-        console.log(data)
-      })
+
 
 
     }

@@ -171,6 +171,25 @@
 
 
 
+<div class="row" style="margin-left: 10%; margin-top: 5%; margin-right: 10%">
+    <div class="col-lg-12">
+        <h4 style="color: white">Summery of Hospitalized Patients</h4>
+        <table class="table table-bordered" id="hospitalData" style="color: white">
+            <thead>
+            <tr>
+                <th scope="col">Hospital</th>
+                <th scope="col"># of Local Patients</th>
+                <th scope="col"># of Foreign Patients</th>
+                <th scope="col">Total Patients</th>
+
+            </tr>
+            </thead>
+
+        </table>
+    </div>
+</div>
+
+
 
 
 
