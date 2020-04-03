@@ -24,7 +24,6 @@ request.onload = function() {
 
     var update_date_time = data['data']["update_date_time"]
 
-    console.log(update_date_time)
 
     document.getElementById("local_new").innerHTML = local_new.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     document.getElementById("local_total_cases").innerHTML = local_total_cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -53,7 +52,7 @@ request.onload = function() {
       var treatment_foreign = hospital_data_[i]['treatment_foreign'];
       var treatment_total = hospital_data_[i]['treatment_total'];
 
-      console.log(hospital_name)
+
       $('#hospitalData tr:last').after('<tr><td>'+hospital_name+' - '+sinhala_name+'</td><td>'+treatment_local+'</td><td>'+treatment_foreign+'</td><td>'+treatment_total+'</td></tr>');
 
 
